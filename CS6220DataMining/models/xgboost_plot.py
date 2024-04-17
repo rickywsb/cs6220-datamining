@@ -21,7 +21,15 @@ X = data[features]
 y = data['p_recall']
 
 # Define and fit the model
-model = xgb.XGBClassifier(objective='binary:logistic', n_estimators=100, max_depth=3)
+model = xgb.XGBClassifier(
+    objective='binary:logistic',
+    n_estimators=100,
+    max_depth=3,
+    reg_alpha=0.01,
+    reg_lambda=1.0,
+    learning_rate=0.05
+)
+
 eval_set = [(X, y)]
 model.fit(X, y, eval_metric="logloss", eval_set=eval_set, verbose=True)
 
