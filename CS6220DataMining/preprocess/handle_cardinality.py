@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction import FeatureHasher
 
 # Load the dataset
-df = pd.read_csv('Duolingo_dataset_scaled.csv')
+df = pd.read_csv('../data/Duolingo_dataset_scaled.csv')
 
 # Initialize the FeatureHasher
 hasher = FeatureHasher(n_features=10, input_type='string')

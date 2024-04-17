@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the final processed CSV file
-df = pd.read_csv('Duolingo_dataset_outliers_capped.csv')
+df = pd.read_csv('../data/Duolingo_dataset_outliers_capped.csv')
 
 # Get descriptive statistics
 print(df.describe())

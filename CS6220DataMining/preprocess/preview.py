@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('Duolingo_dataset.csv')
+df = pd.read_csv('../data/Duolingo_dataset.csv')
 
 # Set display options
 pd.set_option('display.max_columns', None)  # Show all columns

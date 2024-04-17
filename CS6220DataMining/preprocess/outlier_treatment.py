@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the feature-hashed dataset
-df = pd.read_csv('Duolingo_dataset_feature_hashed.csv')
+df = pd.read_csv('../data/Duolingo_dataset_feature_hashed.csv')
 
 # Specify the features to check for outliers and the percentile for capping
 features_to_treat = ['delta', 'session_seen']

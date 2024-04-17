@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df_before = pd.read_csv('Duolingo_dataset_feature_hashed.csv')  # Before outlier treatment
-df_after = pd.read_csv('Duolingo_dataset_outliers_capped.csv')  # After outlier treatment
+df_before = pd.read_csv('../data/Duolingo_dataset_feature_hashed.csv')  # Before outlier treatment
+df_after = pd.read_csv('../data/Duolingo_dataset_outliers_capped.csv')  # After outlier treatment
 
 
 def visualize_outlier_treatment(feature):

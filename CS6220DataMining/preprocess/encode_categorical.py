@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset with datetime features
-df = pd.read_csv('Duolingo_dataset_with_datetime.csv')
+df = pd.read_csv('../data/Duolingo_dataset_with_datetime.csv')
 
 # Define the categorical columns you want to encode
 categorical_columns = ['learning_language', 'ui_language']
