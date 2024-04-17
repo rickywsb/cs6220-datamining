@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 # Load the data
 data = pd.read_csv('dataset_final_downsample.csv')
 
+
 # Convert 'p_recall' to binary if it's not already
 data['p_recall'] = (data['p_recall'] > 0.5).astype(int)
 

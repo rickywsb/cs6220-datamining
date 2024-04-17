@@ -4,6 +4,7 @@ from sklearn.preprocessing import StandardScaler
 # Load the one-hot encoded dataset
 df = pd.read_csv('../data/Duolingo_dataset_encoded.csv')
 
+
 # Define the numerical columns you want to scale
 numerical_columns = ['delta', 'history_seen', 'history_correct', 'session_seen', 'session_correct']
 

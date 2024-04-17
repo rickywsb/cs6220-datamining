@@ -8,6 +8,7 @@ from joblib import Parallel, delayed
 # Load dataset
 df = pd.read_csv('Duolingo_dataset_scaled.csv')
 
+
 # Function to clean and tokenize lexeme strings
 def clean_and_tokenize(lexeme):
     lexeme = re.sub(r'[<>]', ' ', lexeme)  # Remove angle brackets

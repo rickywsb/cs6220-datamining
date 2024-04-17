@@ -4,6 +4,7 @@ import seaborn as sns
 
 df = pd.read_csv('../data/Duolingo_dataset.csv')
 
+
 # Set display options
 pd.set_option('display.max_columns', None)  # Show all columns
 pd.set_option('display.max_rows', 20)       # Show 20 rows

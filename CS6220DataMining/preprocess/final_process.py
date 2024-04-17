@@ -6,6 +6,7 @@ from sklearn.utils import resample
 # Load the data
 df = pd.read_csv('../Duolingo_dataset_outliers_capped.csv')
 
+
 # Remove unnecessary columns
 columns_to_drop = ['timestamp', 'user_id', 'session_correct', 'session_seen', 'delta', 'lexeme_id']
 df.drop(columns_to_drop, axis=1, inplace=True)

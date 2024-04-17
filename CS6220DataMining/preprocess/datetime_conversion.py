@@ -3,6 +3,7 @@ import pandas as pd
 # Load dataset
 df = pd.read_csv('Duolingo_dataset.csv')
 
+
 # Convert 'timestamp' to datetime and extract features
 df['datetime'] = pd.to_datetime(df['timestamp'], unit='s')
 df['hour_of_day'] = df['datetime'].dt.hour

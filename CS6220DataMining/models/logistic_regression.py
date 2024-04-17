@@ -7,7 +7,6 @@ from pyspark.sql.functions import col
 import matplotlib.pyplot as plt
 
 
-
 spark = SparkSession.builder \
     .appName("OptimizedLogisticRegression") \
     .config("spark.executor.memory", "6g")\
