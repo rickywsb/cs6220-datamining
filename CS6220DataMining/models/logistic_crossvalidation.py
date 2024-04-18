@@ -39,17 +39,20 @@ paramGrid = ParamGridBuilder() \
     .addGrid(lr.regParam, [0.01, 0.05, 0.1])  # Test different strengths of regularization
     .build()
 
+# Split the data into training and testing sets
+trainData, testData = df.randomSplit([0.8, 0.2], seed=42)
+
 # Set up the CrossValidator
 cv = CrossValidator(estimator=pipeline,
                     estimatorParamMaps=paramGrid,
                     evaluator=BinaryClassificationEvaluator(labelCol="label"),
                     numFolds=5)  # Use 5-fold cross-validation
 
-# Fit the model using CrossValidator
-cvModel = cv.fit(df)
+# Fit the model using CrossValidator on the training data
+cvModel = cv.fit(trainData)
 
-# Make predictions on the entire dataset using the best model found
-predictions = cvModel.bestModel.transform(df)
+# Make predictions on the test set using the best model found
+predictions = cvModel.bestModel.transform(testData)
 
 # Evaluate the best model
 evaluator = BinaryClassificationEvaluator(labelCol="label", metricName="areaUnderROC")
